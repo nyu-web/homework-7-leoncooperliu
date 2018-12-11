@@ -1,8 +1,8 @@
 console.log('Fine');
 
-var origBoard;
-var whoTurn;
-var end;
+let origBoard;
+let whoTurn;
+let end;
 const humanPlayer = '0';
 const aiPlayer = 'X';
 const winCombos = [
