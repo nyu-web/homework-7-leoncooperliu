@@ -10,6 +10,7 @@ const winCombos = [
 ]
 
 const cells = document.querySelectorAll('.cell');
+const playerTurn = document.getElementById('turn');
 startGame();
 
 function startGame() {
@@ -33,13 +34,13 @@ function turnClick(square) {
         if (whoTurn) {
             turn(square.target.id, humanPlayer);
             whoTurn = false;
-            document.getElementById('turn').innerText = "Player 1's Turn";
-            document.getElementById('turn').style.color = "#2A68FF";
+            playerTurn.innerText = "Player 1's Turn";
+            playerTurn.style.color = "#2A68FF";
         } else {
             turn(square.target.id, aiPlayer);
             whoTurn = true;
-            document.getElementById('turn').innerText = "Player 2's Turn";
-            document.getElementById('turn').style.color = "#FF2A4D";
+            playerTurn.innerText = "Player 2's Turn";
+            playerTurn.style.color = "#FF2A4D";
         }
         if (!end) {
             document.getElementById('info').innerText = 'Click the box!';
